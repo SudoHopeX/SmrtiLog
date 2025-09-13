@@ -13,7 +13,7 @@ Copyright (c) 2025 SudoHopeX
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software for educational and ethical use only, including without limitation the rights
-to use, copy, modify, merge, publish, and distribute copies of the Software, and to permit persons to whom the Software is
+to use, copy, modify, merge, publish (without any cost), and distribute copies of the Software at no cost, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
 This software is strictly for educational and ethical purposes. Any person wishing to use it for malicious purposes is kindly requested not to use it.
@@ -45,7 +45,7 @@ app = Flask(__name__)
 # Store active keys with their creation timestamps
 # Format: {key_id: (key, timestamp)}
 active_keys = {}
-KEY_EXPIRY_TIME = 360  # 6 minutes in seconds
+KEY_EXPIRY_TIME = 360   # 6 minutes in seconds
 LOG_FILE = "/tmp/received_logs.txt"  # received logs file path only for vercel deployment
 
 def cleanup_old_keys():
@@ -141,7 +141,8 @@ def home():
         <html>
           <head>
             <meta charset="utf-8">
-            <title>SudoHopeX Keylogger Logs</title>
+            <link rel="icon" type="image/x-icon" href="https://sudohopex.github.io/img/SudoHopeX.jpg"/>
+            <title>Logs - SudoHopeX Keystroke logger Simulation</title>
             <style>
               :root{
                 --bg: #f7f7f7;
@@ -295,7 +296,9 @@ def home():
                 <p>
                   This project is provided for learning and research purposes only. It <strong>must not</strong> be used
                   to capture or exfiltrate data from other people's devices or accounts, or for any form of surveillance, harassment,
-                  or unauthorized access. Misuse may be illegal and unethical.
+                  or unauthorized access. Misuse is illegal and unethical.
+                  
+                  Regards ~ SudoHopeX
                 </p>
                 <p class="note">
                   By continuing you confirm that you will use this project only on systems you own or where you have explicit permission,
