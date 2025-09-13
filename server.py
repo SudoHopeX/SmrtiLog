@@ -45,8 +45,8 @@ app = Flask(__name__)
 # Store active keys with their creation timestamps
 # Format: {key_id: (key, timestamp)}
 active_keys = {}
-KEY_EXPIRY_TIME = 300  # 5 minutes in seconds
-LOG_FILE = "received_logs.txt"  # received logs file path
+KEY_EXPIRY_TIME = 360  # 6 minutes in seconds
+LOG_FILE = "files/received_logs.txt"  # received logs file path
 
 def cleanup_old_keys():
     """Remove expired keys periodically"""
