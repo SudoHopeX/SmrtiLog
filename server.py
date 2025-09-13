@@ -1,12 +1,12 @@
-'''
+"""
 Keylogger Server by SudoHopeX
 
 A Flask server to handle encrypted logs from a keylogger.
 Provides endpoints to get encryption keys and receive encrypted logs.
 Also includes a web interface to view and clear received logs.
-'''
+"""
 
-'''
+"""
 MIT License
 Copyright (c) 2025 SudoHopeX
 
