@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "main.py",
+      "src": "server.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
-    { "src": "/", "dest": "main.py" },
-    { "src": "/get_key", "dest": "main.py" },
-    { "src": "/receive_logs", "dest": "main.py" },
-    { "src": "/clear_logs", "dest": "main.py" }
+    { "src": "/", "dest": "server.py" },
+    { "src": "/get_key", "dest": "server.py" },
+    { "src": "/receive_logs", "dest": "server.py" },
+    { "src": "/clear_logs", "dest": "server.py" }
   ]
 }
