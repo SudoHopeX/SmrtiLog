@@ -29,7 +29,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-'''
+"""
 
 from flask import Flask, request, render_template_string, abort, redirect, url_for, jsonify
 from cryptography.fernet import Fernet
@@ -133,7 +133,7 @@ def home():
     except FileNotFoundError:
         content = "No logs found."
     except Exception as e:
-        return f"Error reading log file: {e}", 500
+        return f"Error reading log file", 500
 
 
     html_template = """
