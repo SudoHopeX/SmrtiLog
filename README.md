@@ -2,7 +2,9 @@
 
 A smart Keystroke logger that determines user's os name, username, admin access & sends them to a server ( [Keystroke Logger Server by SudoHopeX](https://sudohopex-smrti-log.vercel.app/) )
 
-## Keystroke logger features:
+
+
+## SmrtiLog Keystroke logger features:
   - logs keystrokes
   - determines user's **os name**, **username**, **admin privilege** & send them only once
   - **fetches new encryption key from server each time** it sends logs to encrypt data
@@ -11,17 +13,18 @@ A smart Keystroke logger that determines user's os name, username, admin access 
   - simulates keystroke logger
 
 
-## Keystroke logger Server features:
+## SmrtiLog Server features:
 - A Flask server to handle encrypted logs from a keylogger.
 - Provides endpoints to get encryption keys and receive encrypted logs.
 - Also includes a web interface to view and clear received logs.
 - hosted on vercel
+- all logs received by server are stored temporarily & removed automatically by vercel 
 
 
 ## Tech Stack
 
 ```text
-  Technology            Uses
+  Technology             Uses
 -------------------------------------------------------
   Python                 Core Programming Language          
   pynput (Lib)           Capture keystrokes               
@@ -35,9 +38,9 @@ A smart Keystroke logger that determines user's os name, username, admin access 
   Vercel (web app)       Server deployment  
 ```
 
-## how to use keylogger simulator
+## SmrtiLog Installation
 - Clone the GitHub repository ( for linux ) or [download zip for windows & linux](https://github.com/SudoHopeX/SmrtiLog/archive/refs/heads/main.zip)  
-    ```bash
+  ```bash
   git clone https://github.com/SudoHopeX/SmrtiLog.git
   ```
 
@@ -46,14 +49,18 @@ A smart Keystroke logger that determines user's os name, username, admin access 
     cd SmrtiLog
     ```
 - Execute the run.sh script ( for linux or wsl only )
-    ```bash
-  sudo bash run.sh
+  ```bash
+  sudo bash run.sh --setupRun
+  ```
+  for more usages of run.sh execute 
+  ```bash
+  sudo bash run.sh --help
   ```
 - Make sure python is installed in windows, if not install it - [Install Python 3.13.7 - Windows installer](https://www.python.org/ftp/python/3.13.7/python-3.13.7-amd64.exe)
 - Then open the terminal & move to the SmrtiLog dir & execute 
-```
-python main.py
-```
+  ```
+  python main.py
+  ```
 - Press some keys or perform some action
 - Then, visit [SudoHopeX Keystroke Simulator Server](https://sudohopex-smrti-log.vercel.app/) to see logs
 
@@ -68,9 +75,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 For any queries or support, contact SudoHopeX on:
-- [Website](https://sudohopex.github.io/message-popup.html)
+- [Website DM](https://sudohopex.github.io/message-popup.html)
 - [Linkedin](https://www.linkedin.com/in/dkrishna0124)
 - [GitHub](https://github.com/SudoHopeX)
 
 ## Acknowledgements
-- Thanks to SudoHopeX for developing this project 😎😌
+- Thanku SudoHopeX 😎 for developing this project 
+- Thanku 🫵 for loving 🫶 it...
+
+(❁´◡`❁)
