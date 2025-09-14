@@ -47,8 +47,8 @@ app = Flask(__name__)
 # Format: {key_id: (key, timestamp)}
 active_keys = {}
 KEY_EXPIRY_TIME = 360   # 6 minutes in seconds
-# LOG_FILE = "/tmp/received_logs.txt"  # received logs file path only for vercel deployment
-LOG_FILE = "files/received_logs.txt"  # received logs file path only for local deployment
+LOG_FILE = "/tmp/received_logs.txt"  # received logs file path only for vercel deployment
+# LOG_FILE = "received_logs.txt"  # received logs file path only for local deployment
 
 def cleanup_old_keys():
     """Remove expired keys periodically"""
