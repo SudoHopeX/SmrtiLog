@@ -3,7 +3,6 @@
 A smart Keystroke logger that determines user's os name, username, admin access & sends them to a server ( [Keystroke Logger Server by SudoHopeX](https://sudohopex-smrti-log.vercel.app/) )
 
 
-
 ## SmrtiLog Keystroke logger features:
   - logs keystrokes
   - determines user's **os name**, **username**, **admin privilege** & send them only once
@@ -38,8 +37,9 @@ A smart Keystroke logger that determines user's os name, username, admin access 
   Vercel (web app)       Server deployment  
 ```
 
-## SmrtiLog Installation
-- Clone the GitHub repository ( for linux ) or [download zip for windows & linux](https://github.com/SudoHopeX/SmrtiLog/archive/refs/heads/main.zip)  
+## SmrtiLog Installation & Starting ( Executing the program )
+### For Linux or wsl ( automated )
+- Clone the GitHub repository or [download zip](https://github.com/SudoHopeX/SmrtiLog/archive/refs/heads/main.zip)  
   ```bash
   git clone https://github.com/SudoHopeX/SmrtiLog.git
   ```
@@ -48,20 +48,50 @@ A smart Keystroke logger that determines user's os name, username, admin access 
     ```bash
     cd SmrtiLog
     ```
-- Execute the run.sh script ( for linux or wsl only )
+  
+- Execute the run.sh script
   ```bash
   sudo bash run.sh --setupRun
   ```
+  
   for more usages of run.sh execute 
   ```bash
-  sudo bash run.sh --help
+  bash run.sh --help
   ```
+- Press some keys or perform some key action
+- Then, visit [SudoHopeX Keystroke Simulator Server](https://sudohopex-smrti-log.vercel.app/) to see logs
+
+### For Windows ( manual )
+- [Download SmrtiLog zip](https://github.com/SudoHopeX/SmrtiLog/archive/refs/heads/main.zip)  
+- Extract the zip file
+- Open Command Prompt and navigate to the extracted SmrtiLog directory
 - Make sure python is installed in windows, if not install it - [Install Python 3.13.7 - Windows installer](https://www.python.org/ftp/python/3.13.7/python-3.13.7-amd64.exe)
-- Then open the terminal & move to the SmrtiLog dir & execute 
+- Install the required libraries using pip with requirements.txt
+    ```
+    python3 -m pip3 install - r requirements.txt
+    ```
+- Run the main.py script
+    ```
+    python main.py
+    ```
+- Press some keys or perform some key action
+- Then, visit [SudoHopeX Keystroke Simulator Server](https://sudohopex-smrti-log.vercel.app/) to see logs
+  
+### For windows ( automated )
+- [Download SmrtiLog zip](https://github.com/SudoHopeX/SmrtiLog/archive/refs/heads/main.zip)  
+- Extract the zip file
+- Make sure python is installed in windows, if not install it - [Install Python 3.13.7 - Windows installer](https://www.python.org/ftp/python/3.13.7/python-3.13.7-amd64.exe)
+- Navigate to the extracted SmrtiLog directory
+- Double-click on `run.bat` file to open command prompt or
+- Open Command Prompt, navigate to `SmrtiLog` Directory & Execute the `run.bat` script
+  ```cmd
+  run.bat --setupRun
   ```
-  python main.py
-  ```
-- Press some keys or perform some action
+    for more usages of run.bat execute 
+    ```cmd
+    run.bat --help
+    ```
+- Press some keys or perform some key action
 - Then, visit [SudoHopeX Keystroke Simulator Server](https://sudohopex-smrti-log.vercel.app/) to see logs
 
 ## Security Notice
