@@ -63,7 +63,7 @@ function setup_smrti_log_keystroke_logger(){
 
   # Installing SmrtiLog required libraries or packages
   echo -e "${MAGENTA}[>_] Installing required SmrtiLog dependencies & pkgs....${RESET}"
-  pip3 install requests pynput
+  pip3 install requests pynput cryptography
 
   echo -e "${GREEN}[✔] SmrtiLog Setup Successfully Done...${RESET}"
 }
