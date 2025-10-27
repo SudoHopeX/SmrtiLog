@@ -13,7 +13,9 @@ A smart Keystroke logger that determines user's os name, username, admin access 
 
 
 ## SmrtiLog Server:
-[SmrtiLog Server Usages Clip](https://sudohopex.github.io/img/smrti-log-server-usages-by-sudohopex.mp4)
+
+![SmrtiLog Server Usages Clip](https://github.com/SudoHopeX/sudohopex.github.io/blob/a2629425632ab68cd9c426b981153188bfb2e555/img/smrti-log-server-usages-by-sudohopex.mp4)
+
 - A Flask server to handle encrypted logs from a keylogger.
 - Provides endpoints to get encryption keys and receive encrypted logs.
 - Also includes a web interface to view and clear received logs.
